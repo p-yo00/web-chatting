@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/chatting?serverTimezone=UTC&characterEncoding=UTF-8
+    username: root
+    password: 1234
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    generate-ddl: true
+    show-sql: true
+
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+
+oauth:
+  naver:
+    clientId: ${CLIENT_ID}
+    clientSecret: ${CLIENT_SECRET}
+    redirectUrl: ${REDIRECT_URL}
+    csrfToken: ${CSRF_TOKEN}
